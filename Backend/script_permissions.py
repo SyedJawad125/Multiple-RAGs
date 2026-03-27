@@ -97,6 +97,7 @@ permissions = [
     Permission(name='Update Image Category', code_name='update_image_category', module_name='Image Category', module_label='Image Category Management', description='User can update Image Category'),
     Permission(name='Delete Image Category', code_name='delete_image_category', module_name='Image Category', module_label='Image Category Management', description='User can delete Image Category'),
 
+    # ---------- AI_Resume_Screening_App ----------
     # ---------- JOB ----------
     Permission(name='Create Job',  code_name='create_job',  module_name='Job', module_label='Job Management', description='User can create a job'),
     Permission(name='Read Job',    code_name='read_job',    module_name='Job', module_label='Job Management', description='User can view a job'),
@@ -127,6 +128,44 @@ permissions = [
     Permission(name='Screening Analytics', code_name='analytics_screening', module_name='Screening', module_label='Screening Management', description='User can view the full screening analytics dashboard for the company'),
     Permission(name='Screening Stats',     code_name='stats_screening',     module_name='Screening', module_label='Screening Management', description='User can view lightweight screening statistics for the company'),
     Permission(name='Show All Screenings', code_name='show_all_screenings', module_name='Screening', module_label='Screening Management', description='User can see screening sessions and results initiated by other users (manager/admin only)'),
+
+    # ---------- ragstack_permissions ----------
+    # ---------- DOCUMENT MANAGEMENT ----------
+    Permission(name='Upload Document', code_name='upload_document', module_name='Document', module_label='RAG Document Management', description='User can upload documents to RAG system'),
+    Permission(name='Read Document', code_name='read_document', module_name='Document', module_label='RAG Document Management', description='User can view documents in RAG system'),
+    Permission(name='Update Document', code_name='update_document', module_name='Document', module_label='RAG Document Management', description='User can update documents in RAG system'),
+    Permission(name='Delete Document', code_name='delete_document', module_name='Document', module_label='RAG Document Management', description='User can delete documents from RAG system'),
+    Permission(name='Share Document', code_name='share_document', module_name='Document', module_label='RAG Document Management', description='User can share documents with other users'),
+    Permission(name='View Processing Status', code_name='view_processing_status', module_name='Document', module_label='RAG Document Management', description='User can view document processing status'),
+    
+    # ---------- RAG QUERY EXECUTION ----------
+    Permission(name='Execute RAG Query', code_name='execute_rag_query', module_name='Query', module_label='RAG Query System', description='User can execute RAG queries'),
+    Permission(name='View Query History', code_name='view_query_history', module_name='Query', module_label='RAG Query System', description='User can view query history'),
+    Permission(name='View Citations', code_name='view_citations', module_name='Query', module_label='RAG Query System', description='User can view query citations and sources'),
+    Permission(name='Submit Query Feedback', code_name='submit_query_feedback', module_name='Query', module_label='RAG Query System', description='User can submit feedback on query results'),
+    Permission(name='Use Advanced Features', code_name='use_advanced_features', module_name='Query', module_label='RAG Query System', description='User can use re-ranking, query rewriting, and other advanced features'),
+    
+    # ---------- CONVERSATION MANAGEMENT ----------
+    Permission(name='Create Conversation', code_name='create_conversation', module_name='Conversation', module_label='RAG Conversation Management', description='User can create new conversations'),
+    Permission(name='Read Conversation', code_name='read_conversation', module_name='Conversation', module_label='RAG Conversation Management', description='User can view conversation history'),
+    Permission(name='Update Conversation', code_name='update_conversation', module_name='Conversation', module_label='RAG Conversation Management', description='User can update conversation details'),
+    Permission(name='Delete Conversation', code_name='delete_conversation', module_name='Conversation', module_label='RAG Conversation Management', description='User can delete conversations'),
+    
+    # ---------- KNOWLEDGE GRAPH ----------
+    Permission(name='View Knowledge Graph', code_name='view_knowledge_graph', module_name='KnowledgeGraph', module_label='RAG Knowledge Graph', description='User can view knowledge graph entities and relationships'),
+    Permission(name='Explore Entities', code_name='explore_entities', module_name='KnowledgeGraph', module_label='RAG Knowledge Graph', description='User can explore knowledge graph entities'),
+    
+    # ---------- ANALYTICS & REPORTS ----------
+    Permission(name='View RAG Analytics', code_name='view_rag_analytics', module_name='Analytics', module_label='RAG Analytics', description='User can view RAG usage analytics'),
+    Permission(name='View Performance Metrics', code_name='view_performance_metrics', module_name='Analytics', module_label='RAG Analytics', description='User can view RAG performance metrics'),
+    Permission(name='Export Analytics', code_name='export_analytics', module_name='Analytics', module_label='RAG Analytics', description='User can export analytics data'),
+    
+    # ---------- ADMIN FUNCTIONS ----------
+    Permission(name='Manage RAG Settings', code_name='manage_rag_settings', module_name='Settings', module_label='RAG Administration', description='User can manage RAG system settings'),
+    Permission(name='View All Documents', code_name='view_all_documents', module_name='Document', module_label='RAG Administration', description='Admin can view all documents in the system'),
+    Permission(name='Reprocess Documents', code_name='reprocess_documents', module_name='Document', module_label='RAG Administration', description='Admin can reprocess documents'),
+    Permission(name='Clear Vector Store', code_name='clear_vector_store', module_name='Settings', module_label='RAG Administration', description='Admin can clear vector store data'),
+
 ]
 
 

@@ -65,7 +65,7 @@ INSTALLED_APPS = [
     # Existing apps
     'User_App.notification',
     'User_App.images',
-
+    'RagStack_App.ragstack',
     # New RAG apps
     'AI_Resume_Screening_App.jobs',
     'AI_Resume_Screening_App.resumes',

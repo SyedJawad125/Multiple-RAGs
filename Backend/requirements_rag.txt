@@ -1,0 +1,43 @@
+# ===============================================================
+# RAG System Requirements with Groq API
+# ===============================================================
+# Install with: pip install -r requirements_rag.txt
+
+# Core Dependencies
+Django>=4.2.0
+djangorestframework>=3.14.0
+python-decouple>=3.8
+
+# Groq API (LLM)
+groq>=0.4.0
+
+# Vector Embeddings & Search
+sentence-transformers>=2.2.2
+transformers>=4.30.0
+torch>=2.0.0
+
+# Hybrid Search
+rank-bm25>=0.2.2
+
+# Re-ranking
+cross-encoder>=1.2.0
+
+# Document Processing
+PyPDF2>=3.0.1
+python-docx>=0.8.11
+openpyxl>=3.1.2
+
+# Token Counting
+tiktoken>=0.5.0
+
+# Async Support
+aiohttp>=3.8.0
+
+# Database (if not already included)
+psycopg2-binary>=2.9.0
+
+# Optional: Progress bars
+tqdm>=4.65.0
+
+# Optional: More document formats
+python-magic>=0.4.27

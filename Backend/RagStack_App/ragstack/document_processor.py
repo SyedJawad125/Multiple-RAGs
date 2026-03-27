@@ -384,7 +384,7 @@ def test_document_processor():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
     django.setup()
     
-    from apps.ragstack.models import Document
+    from RagStack_App.ragstack.models import Document
     
     # Get a document to process
     docs = Document.objects.filter(status='uploading').order_by('-created_at')

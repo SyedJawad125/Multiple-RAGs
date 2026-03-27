@@ -17,8 +17,8 @@ sys.path.insert(0, project_root)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
-from apps.ragstack.llm_service import GroqLLMService, get_groq_service
-from apps.ragstack.rag_dependencies import check_services_health, initialize_all_services
+from RagStack_App.ragstack.llm_service import GroqLLMService, get_groq_service
+from RagStack_App.ragstack.rag_dependencies import check_services_health, initialize_all_services
 
 
 def print_header(text):

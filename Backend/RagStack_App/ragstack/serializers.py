@@ -10,7 +10,7 @@ from .models import (
     Citation, GraphEntity, GraphRelationship,
     QueryFeedback, UsageMetrics
 )
-from apps.users.models import User
+from User_App.users.models import User
 from utils.reusable_functions import get_first_error
 
 

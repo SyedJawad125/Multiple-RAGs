@@ -228,7 +228,7 @@ class DocumentShareView(APIView):
                     status=status.HTTP_404_NOT_FOUND
                 )
             
-            from apps.users.models import User
+            from User_App.users.models import User
             users = User.objects.filter(id__in=user_ids, deleted=False)
             document.allowed_users.add(*users)
             

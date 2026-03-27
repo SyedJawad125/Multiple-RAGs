@@ -17,8 +17,8 @@ sys.path.insert(0, project_root)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
-from apps.ragstack.models import Document, DocumentChunk
-from apps.ragstack.document_processor import DocumentProcessor
+from RagStack_App.ragstack.models import Document, DocumentChunk
+from RagStack_App.ragstack.document_processor import DocumentProcessor
 
 
 def reprocess_documents():

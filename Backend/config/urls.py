@@ -12,7 +12,8 @@ urlpatterns = [
     path('api/jobs/',      include('AI_Resume_Screening_App.jobs.urls')),
     path('api/resumes/',   include('AI_Resume_Screening_App.resumes.urls')),
     path('api/screening/', include('AI_Resume_Screening_App.screening.urls')),
-    
+    path('api/rag/',       include('RagStack_App.ragstack.urls')),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
