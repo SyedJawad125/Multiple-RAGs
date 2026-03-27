@@ -53,7 +53,7 @@ def diagnose():
     print(f"\n🔄 Attempting to process document...")
     
     try:
-        from apps.ragstack.document_processor import DocumentProcessor
+        from RagStack_App.ragstack.document_processor import DocumentProcessor
         processor = DocumentProcessor()
         
         # Process synchronously

@@ -11,7 +11,7 @@ sys.path.insert(0, project_root)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
-from apps.ragstack.models import Document
+from RagStack_App.ragstack.models import Document
 from django.core.files.storage import default_storage
 
 def cleanup():
