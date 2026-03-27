@@ -354,7 +354,7 @@ LINK_TOKEN_LENGTH       = int(os.environ.get('LINK_TOKEN_LENGTH', 32))
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.auth',
-    'apps.users',           # custom user model — must come before admin
+    'AI_Resume_Screening_App.users',           # custom user model — must come before admin
     'django.contrib.admin',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -372,13 +372,13 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
 
     # Existing apps
-    'apps.notification',
-    'apps.images',
+    'AI_Resume_Screening_App.notification',
+    'AI_Resume_Screening_App.images',
 
     # New RAG apps
-    'apps.jobs',
-    'apps.resumes',
-    'apps.screening',
+    'AI_Resume_Screening_App.jobs',
+    'AI_Resume_Screening_App.resumes',
+    'AI_Resume_Screening_App.screening',
 ]
 
 
@@ -493,7 +493,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 20,
     'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'EXCEPTION_HANDLER': 'apps.core.utils.exception_handler.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'AI_Resume_Screening_App.core.utils.exception_handler.custom_exception_handler',
 }
 
 
@@ -649,7 +649,7 @@ LOGGING = {
     'loggers': {
         'django': {'handlers': ['console'], 'level': LOG_LEVEL, 'propagate': False},
         'core':   {'handlers': ['console'], 'level': LOG_LEVEL, 'propagate': False},
-        'apps':   {'handlers': ['console'], 'level': LOG_LEVEL, 'propagate': False},
+        'AI_Resume_Screening_App':   {'handlers': ['console'], 'level': LOG_LEVEL, 'propagate': False},
     },
 }
 

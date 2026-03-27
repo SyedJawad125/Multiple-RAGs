@@ -1,7 +1,6 @@
 from django.apps import AppConfig
 
 
-class UsersConfig(AppConfig):
+class NotificationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'apps.users'
-    label = "users"
+    name = 'AI_Resume_Screening_App.notification'
