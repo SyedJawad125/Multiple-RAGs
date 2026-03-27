@@ -15,7 +15,7 @@ from config.settings import (SIMPLE_JWT, FRONTEND_BASE_URL, PASSWORD_RESET_VALID
 from .models import Company, UserToken, User
 from django.utils import timezone
 from utils.helpers import generate_token, paginate_data
-from apps.notification.tasks import send_email
+from AI_Resume_Screening_App.notification.tasks import send_email
 from utils.enums import *
 from django.db import transaction
 from utils.base_api import BaseView

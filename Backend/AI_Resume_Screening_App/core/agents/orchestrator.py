@@ -76,7 +76,7 @@ class ScreeningOrchestrator:
         Full resume parsing pipeline.
         Returns True on success, False on failure.
         """
-        from apps.resumes.models import Resume, ResumeStatus, ResumeSkill, ResumeParseLog
+        from AI_Resume_Screening_App.resumes.models import Resume, ResumeStatus, ResumeSkill, ResumeParseLog
         t0 = time.time()
 
         try:
@@ -171,7 +171,7 @@ class ScreeningOrchestrator:
                 resume.status      = 'failed'
                 resume.parse_error = str(exc)
                 resume.save(update_fields=['status', 'parse_error'])
-                from apps.resumes.models import ResumeParseLog
+                from AI_Resume_Screening_App.resumes.models import ResumeParseLog
                 ResumeParseLog.objects.create(
                     resume             = resume,
                     agent              = 'orchestrator',
@@ -192,7 +192,7 @@ class ScreeningOrchestrator:
         Analyze a JD and populate skills + analysis record.
         Returns True on success.
         """
-        from apps.jobs.models import JobDescription, JobSkill, JobAnalysis, SkillImportance
+        from AI_Resume_Screening_App.jobs.models import JobDescription, JobSkill, JobAnalysis, SkillImportance
         try:
             job     = JobDescription.objects.get(id=job_id)
             jd_text = job.get_full_text()
@@ -279,8 +279,8 @@ class ScreeningOrchestrator:
         Full screening pipeline for one ScreeningResult row.
         Returns True on success.
         """
-        from apps.screening.models import ScreeningResult, ScreeningStatus
-        from apps.jobs.models import JobSkill
+        from AI_Resume_Screening_App.screening.models import ScreeningResult, ScreeningStatus
+        from AI_Resume_Screening_App.jobs.models import JobSkill
         t0 = time.time()
 
         try:

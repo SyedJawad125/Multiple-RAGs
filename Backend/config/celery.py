@@ -8,11 +8,11 @@ app.config_from_object("django.conf:settings", namespace="CELERY")
 
 # ← Explicitly list all apps so core/tasks.py is discovered
 app.autodiscover_tasks([
-    'apps.users',
-    'apps.myapp',
-    'apps.notification',
-    'apps.jobs',
-    'apps.resumes',
-    'apps.screening',
+    'AI_Resume_Screening_App.users',
+    'AI_Resume_Screening_App.myapp',
+    'AI_Resume_Screening_App.notification',
+    'AI_Resume_Screening_App.jobs',
+    'AI_Resume_Screening_App.resumes',
+    'AI_Resume_Screening_App.screening',
     # 'core',           # ← This discovers core/tasks.py
 ])

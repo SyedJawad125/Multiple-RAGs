@@ -149,7 +149,7 @@ class ExplanationAgent:
 
     def _log(self, result_id, status, output, tokens, ms, error=''):
         try:
-            from apps.screening.models import AgentExecutionLog, ScreeningResult
+            from AI_Resume_Screening_App.screening.models import AgentExecutionLog, ScreeningResult
             result = ScreeningResult.objects.get(id=result_id)
             AgentExecutionLog.objects.create(
                 screening_result   = result,

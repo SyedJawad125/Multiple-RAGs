@@ -184,7 +184,7 @@ class ResumeParserAgent:
 
     def _log(self, resume_id, status, output, tokens, ms, error=''):
         try:
-            from apps.screening.models import AgentExecutionLog
+            from AI_Resume_Screening_App.screening.models import AgentExecutionLog
             AgentExecutionLog.objects.create(
                 agent_type         = 'resume_parser',
                 input_summary      = {'resume_id': resume_id},

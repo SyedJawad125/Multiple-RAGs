@@ -6,10 +6,10 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 import django
 django.setup()
 
-from apps.users.models import User, Role, Permission
+from AI_Resume_Screening_App.users.models import User, Role, Permission
 from django.contrib.auth.hashers import make_password
 from config import settings
-from apps.notification.models import EmailTemplate
+from AI_Resume_Screening_App.notification.models import EmailTemplate
 
 
 def populate():

@@ -1,5 +1,5 @@
 from rest_framework.exceptions import PermissionDenied, ValidationError
-from apps.users.models import Role
+from AI_Resume_Screening_App.users.models import Role
 
 
 def permission_required(permissions):

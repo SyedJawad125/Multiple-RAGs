@@ -49,7 +49,7 @@ def bulk_parse_resumes_task(self, resume_ids: list[str], bulk_session_id: str) -
     Updates BulkResumeUpload progress after each resume.
     """
     logger.info(f'[Task] bulk_parse_resumes_task — {len(resume_ids)} resumes, session {bulk_session_id}')
-    from apps.resumes.models import BulkResumeUpload
+    from AI_Resume_Screening_App.resumes.models import BulkResumeUpload
     from core.agents.orchestrator import ScreeningOrchestrator
 
     try:
@@ -128,7 +128,7 @@ def run_screening_session_task(self, session_id: str) -> dict:
       4. Marks session COMPLETED
     """
     logger.info(f'[Task] run_screening_session_task → {session_id}')
-    from apps.screening.models import ScreeningSession, ScreeningResult, ScreeningStatus
+    from AI_Resume_Screening_App.screening.models import ScreeningSession, ScreeningResult, ScreeningStatus
     from core.agents.orchestrator import ScreeningOrchestrator
 
     try:
@@ -198,7 +198,7 @@ def run_screening_session_task(self, session_id: str) -> dict:
 
 def _rank_session_candidates(session_id: str) -> None:
     """Assign rank 1..N by descending overall_score within a session."""
-    from apps.screening.models import ScreeningResult, ScreeningStatus
+    from AI_Resume_Screening_App.screening.models import ScreeningResult, ScreeningStatus
     results = (
         ScreeningResult.objects
         .filter(session_id=session_id, status=ScreeningStatus.COMPLETED)
