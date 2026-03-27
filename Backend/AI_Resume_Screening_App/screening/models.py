@@ -12,7 +12,6 @@ class ScreeningStatus(models.TextChoices):
     COMPLETED  = 'completed',  'Completed'
     FAILED     = 'failed',     'Failed'
 
-
 class CandidateDecision(models.TextChoices):
     SHORTLISTED = 'shortlisted', 'Shortlisted'
     INTERVIEW   = 'interview',   'Invite to Interview'

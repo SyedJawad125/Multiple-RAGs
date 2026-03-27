@@ -6,8 +6,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/user/', include('AI_Resume_Screening_App.users.urls')),
-    path('api/images/', include('AI_Resume_Screening_App.images.urls')),
+    path('api/user/', include('User_App.users.urls')),
+    path('api/images/', include('User_App.images.urls')),
 
     path('api/jobs/',      include('AI_Resume_Screening_App.jobs.urls')),
     path('api/resumes/',   include('AI_Resume_Screening_App.resumes.urls')),

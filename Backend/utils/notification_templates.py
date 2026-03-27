@@ -1,6 +1,6 @@
 from django.core.mail import EmailMultiAlternatives
 from django.template import engines
-from AI_Resume_Screening_App.notification.models import EmailTemplate
+from User_App.notification.models import EmailTemplate
 from core.settings import EMAIL_HOST_USER, BACKEND_BASE_URL
 
 

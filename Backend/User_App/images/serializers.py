@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Categories, Images
-from AI_Resume_Screening_App.users.serializers import UserListSerializer
+from User_App.users.serializers import UserListSerializer
 from django.utils.text import slugify
 from config.settings import BACKEND_BASE_URL
 import re

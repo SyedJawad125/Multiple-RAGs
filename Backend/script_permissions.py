@@ -6,7 +6,7 @@ import django
 
 django.setup()
 
-from AI_Resume_Screening_App.users.models import Permission
+from User_App.users.models import Permission
 
 permissions = [
     # ---------- ROLE ----------

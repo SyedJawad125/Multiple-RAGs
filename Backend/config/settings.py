@@ -45,7 +45,7 @@ LINK_TOKEN_LENGTH       = int(os.environ.get('LINK_TOKEN_LENGTH', 32))
 INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.auth',
-    'AI_Resume_Screening_App.users',           # custom user model — must come before admin
+    'User_App.users',           # custom user model — must come before admin
     'django.contrib.admin',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -63,8 +63,8 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
 
     # Existing apps
-    'AI_Resume_Screening_App.notification',
-    'AI_Resume_Screening_App.images',
+    'User_App.notification',
+    'User_App.images',
 
     # New RAG apps
     'AI_Resume_Screening_App.jobs',

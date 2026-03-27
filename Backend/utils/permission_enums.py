@@ -136,3 +136,44 @@ CREATE_COMPANY = 'create_company'
 READ_COMPANY   = 'read_company'
 UPDATE_COMPANY = 'update_company'
 DELETE_COMPANY = 'delete_company'
+
+
+"""
+RagStack App Permission Enums
+"""
+
+# ---------- DOCUMENT MANAGEMENT ----------
+UPLOAD_DOCUMENT = 'upload_document'
+READ_DOCUMENT = 'read_document'
+UPDATE_DOCUMENT = 'update_document'
+DELETE_DOCUMENT = 'delete_document'
+SHARE_DOCUMENT = 'share_document'
+VIEW_PROCESSING_STATUS = 'view_processing_status'
+
+# ---------- RAG QUERY EXECUTION ----------
+EXECUTE_RAG_QUERY = 'execute_rag_query'
+VIEW_QUERY_HISTORY = 'view_query_history'
+VIEW_CITATIONS = 'view_citations'
+SUBMIT_QUERY_FEEDBACK = 'submit_query_feedback'
+USE_ADVANCED_FEATURES = 'use_advanced_features'
+
+# ---------- CONVERSATION MANAGEMENT ----------
+CREATE_CONVERSATION = 'create_conversation'
+READ_CONVERSATION = 'read_conversation'
+UPDATE_CONVERSATION = 'update_conversation'
+DELETE_CONVERSATION = 'delete_conversation'
+
+# ---------- KNOWLEDGE GRAPH ----------
+VIEW_KNOWLEDGE_GRAPH = 'view_knowledge_graph'
+EXPLORE_ENTITIES = 'explore_entities'
+
+# ---------- ANALYTICS & REPORTS ----------
+VIEW_RAG_ANALYTICS = 'view_rag_analytics'
+VIEW_PERFORMANCE_METRICS = 'view_performance_metrics'
+EXPORT_ANALYTICS = 'export_analytics'
+
+# ---------- ADMIN FUNCTIONS ----------
+MANAGE_RAG_SETTINGS = 'manage_rag_settings'
+VIEW_ALL_DOCUMENTS = 'view_all_documents'
+REPROCESS_DOCUMENTS = 'reprocess_documents'
+CLEAR_VECTOR_STORE = 'clear_vector_store'
