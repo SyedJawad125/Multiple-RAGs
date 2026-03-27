@@ -1,0 +1,110 @@
+# # Ignore Python cache & compiled files
+# __pycache__/
+# *.pyc
+# *.pyo
+# *.pyd
+
+# # Ignore virtual environments
+# venv/
+# env/
+# .venv/
+# venv2
+# venv2/
+
+# # Ignore IDE/editor settings
+# .idea/
+# .vscode/
+# *.swp
+
+# # Ignore system files
+# .DS_Store
+# Thumbs.db
+
+# # Ignore logs & coverage
+# *.log
+# *.pot
+# *.mo
+# *.sqlite3
+# coverage/
+# htmlcov/
+
+# # Ignore local media/static if generated
+# /media/
+# staticfiles/
+
+# # Ignore build and cache artifacts
+# build/
+# dist/
+# *.egg-info
+
+# my_mig.bat
+
+
+
+
+# ── Python cache & compiled files ─────────────────────────────────
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Virtual environments ───────────────────────────────────────────
+venv/
+env/
+.venv/
+venv2/
+
+# ── IDE / editor ──────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+
+# ── OS files ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Logs & coverage ───────────────────────────────────────────────
+*.log
+*.pot
+*.mo
+*.sqlite3
+coverage/
+htmlcov/
+.coverage
+.pytest_cache/
+
+# ── Django generated ──────────────────────────────────────────────
+/media/
+/static/
+staticfiles/
+
+# ── Build & dist artifacts ────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+
+# ── Git ───────────────────────────────────────────────────────────
+.git/
+.gitignore
+.gitattributes
+
+# ── Docker files (no need to copy into image) ─────────────────────
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ── ChromaDB vector store (mounted as Docker volume) ──────────────
+chroma_db/
+
+# ── Node (if any frontend assets) ─────────────────────────────────
+node_modules/
+
+# ── Windows batch scripts ─────────────────────────────────────────
+*.bat
+my_mig.bat
+
+# ── Environment secrets (never bake into image) ───────────────────
+.env
+.env.*
+!.env.example
