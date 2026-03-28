@@ -21,31 +21,56 @@ class GroqLLMService:
     Production-ready Groq LLM Service for RAG system
     """
     
+    # def __init__(self):
+    #     """Initialize Groq client"""
+    #     try:
+    #         # Try to get API key from multiple sources
+    #         api_key = config('GROQ_API_KEY', default=None)
+    #         if not api_key:
+    #             api_key = os.getenv('GROQ_API_KEY')
+            
+    #         if not api_key:
+    #             raise ValueError(
+    #                 "GROQ_API_KEY not found. Please set it in .env file or environment variables."
+    #             )
+            
+    #         self.client = Groq(api_key=api_key)
+            
+    #         # Model configuration - using best available models
+    #         self.models = {
+    #             'fast': 'llama-3.1-8b-instant',      # Fast responses
+    #             'balanced': 'llama-3.3-70b-versatile', # Balanced speed/quality
+    #             'quality': 'llama-3.3-70b-versatile'   # Best quality
+    #         }
+            
+    #         self.default_model = self.models['balanced']
+            
+    #         logger.info(f"✅ Groq LLM Service initialized with model: {self.default_model}")
+            
+    #     except Exception as e:
+    #         logger.error(f"❌ Failed to initialize Groq service: {e}")
+    #         raise
+
     def __init__(self):
-        """Initialize Groq client"""
         try:
-            # Try to get API key from multiple sources
-            api_key = config('GROQ_API_KEY', default=None)
-            if not api_key:
-                api_key = os.getenv('GROQ_API_KEY')
+            api_key = os.getenv('GROQ_API_KEY')
             
             if not api_key:
                 raise ValueError(
-                    "GROQ_API_KEY not found. Please set it in .env file or environment variables."
+                    "GROQ_API_KEY not found. Set it in your .env file."
                 )
             
+            # Pass ONLY api_key — no extra kwargs that break older/newer httpx
             self.client = Groq(api_key=api_key)
             
-            # Model configuration - using best available models
             self.models = {
-                'fast': 'llama-3.1-8b-instant',      # Fast responses
-                'balanced': 'llama-3.3-70b-versatile', # Balanced speed/quality
-                'quality': 'llama-3.3-70b-versatile'   # Best quality
+                'fast':     'llama-3.1-8b-instant',
+                'balanced': 'llama-3.3-70b-versatile',
+                'quality':  'llama-3.3-70b-versatile'
             }
-            
             self.default_model = self.models['balanced']
             
-            logger.info(f"✅ Groq LLM Service initialized with model: {self.default_model}")
+            logger.info(f"✅ Groq LLM Service initialized: {self.default_model}")
             
         except Exception as e:
             logger.error(f"❌ Failed to initialize Groq service: {e}")
